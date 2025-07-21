@@ -3,14 +3,102 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>demoWeb</title>
+    <title>Lee Yunseok</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 </head>
 
 <body>
-    <h1>demoWeb</h1>
-    <p>This is a demoWeb!</p>
+    <div id="loading-screen">
+        <div class="loading-text">LEEYUNSEOK</div>
+    </div>
+
+    <header>
+        <div class="header-content">
+            <a href="https://demoweb-63168.web.app">
+                <p style="font-weight: 900;">LEEYUNSEOK</p>
+            </a>
+        </div>
+    </header>
+
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="slide-content">
+                    <p class="subTitle">Hello</p>
+                    <p>안녕하세요! 이윤석입니다.</p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="slide-content">
+                    <p class="subTitle">About</p>
+                    <p>이윤석<br>2003년 05월 01일 출생<br>대전 광역시, 대한민국<br>dbstjr3576@gmail.com<br>충남대학교 인공지능학과</p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="slide-content">
+                    <p class="subTitle">Code</p>
+                    <p>Python, Java, JavaScript, HTML, CSS</p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="slide-content">
+                    <p class="subTitle">Media</p>
+                    <p>Premiere Pro, After Effect, Photoshop, Blender, FL Studio</p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="slide-content">
+                    <p class="subTitle">Log or Notes</p>
+                    <p>Instagram</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
+
+<script defer type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js";
+
+    const firebaseConfig = {
+        apiKey: "AIzaSyDDMmT2SkLGNevAKRCDADLjSTd0TcC8pfo",
+        authDomain: "demoweb-63168.firebaseapp.com",
+        projectId: "demoweb-63168",
+        storageBucket: "demoweb-63168.firebasestorage.app",
+        messagingSenderId: "223776136595",
+        appId: "1:223776136595:web:438a4aaaa6268049a19c66"
+    };
+
+    const app = initializeApp(firebaseConfig);
+
+    const swiper = new Swiper(".mySwiper", {
+        direction: "vertical",
+        slidesPerView: 1,
+        spaceBetween: 0,
+        mousewheel: true,
+        keyboard: {
+            enabled: true,
+            onlyInViewport: false,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        speed: 1000,
+    });
+
+    window.addEventListener("load", () => {
+        const loadingScreen = document.getElementById("loading-screen");
+        setTimeout(() => {
+            loadingScreen.style.display = "none";
+        }, 4000);
+    });
+
+</script>
 
 </html>
