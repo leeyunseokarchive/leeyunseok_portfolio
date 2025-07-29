@@ -6,16 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>LEEYUNSEOK</title>
     <link rel="stylesheet" href="style.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
     <div id="loading-screen">
         <div class="loading-text">LEEYUNSEOK</div>
+    </div>
+
+    <div id="slideMenu" class="slideMenu">
+        <ul>
+            <li><a href="#AB">About</a></li>
+            <li><a href="#CP">Code</a></li>
+            <li><a href="#MP">Media</a></li>
+            <li><a href="#LO">Log</a></li>
+        </ul>
+        <div class="detailsWrapperLeft">
+            <a target="_blank" href="https://www.instagram.com/leeyunseokarchive/">Instagram</a>
+            <a target="_blank" href="https://github.com/leeyunseokarchive">GitHub</a>
+            <a target="_blank" href="https://www.linkedin.com/in/lee-yunseok-071890369/">LinkedIn</a>
+            <a target="_blank" href="mailto:dbstjr3576@gmail.com">dbstjr3576@gmail.com</a>
+        </div>
+        <div class="detailsWrapperRight">
+            <p>©2025 LEEYUNSEOK</p>
+        </div>
     </div>
 
     <header>
@@ -44,23 +66,23 @@
                 <div class="slide-content">
                     <img src="resource/about.svg" class="icons">
                     <p class="subTitle">About</p>
-                    <div class="flip-container" id="info">
+                    <div class="flip-container fade-up" id="info">
                         <div class="flip-card">
-                            <div class="flip-card-front">기본정보</div>
+                            <div class="flip-card-front">Infomation</div>
                             <div class="flip-card-back">2003년 05월 01일 출생<br>대전 광역시, 대한민국<br>병역필</div>
                         </div>
                     </div>
 
-                    <div class="flip-container" id="career">
+                    <div class="flip-container fade-up" id="career">
                         <div class="flip-card">
-                            <div class="flip-card-front">경력사항</div>
+                            <div class="flip-card-front">Career</div>
                             <div class="flip-card-back">충남대학교 인공지능학과 재학<br>영상편집 프리랜서 (8년)</div>
                         </div>
                     </div>
 
-                    <div class="flip-container" id="skills">
+                    <div class="flip-container fade-up" id="skills">
                         <div class="flip-card">
-                            <div class="flip-card-front">기술스택</div>
+                            <div class="flip-card-front">Skills</div>
                             <div class="flip-card-back">프리미어 프로, 에프터 이펙트, 포토샵<br>JAVA, PYTHON, HTML, CSS, JS</div>
                         </div>
                     </div>
@@ -71,23 +93,27 @@
                     <img src="resource/code.svg" class="icons">
                     <p class="subTitle">Coding Projects</p>
 
-                    <div class="flip-container" id="portfolio">
+                    <div class="flip-container fade-up" id="portfolio">
                         <div class="flip-card">
-                            <div class="flip-card-front">Leeyunseok Portfolio</div>
+                            <div class="flip-card-front">portfolio</div>
                             <div class="flip-card-back">개인 포트폴리오 반응형 웹사이트</div>
                         </div>
                     </div>
 
-                     <div class="flip-container" id="HealthPT">
+                    <div class="flip-container fade-up" id="HealthPT">
                         <div class="flip-card">
-                            <div class="flip-card-front">HealthPT</div>
+                            <div class="flip-card-front">
+                                <img class="projectImage" src="resource/healthPTImage.webp" />
+                            </div>
                             <div class="flip-card-back">IOT 기반 헬스장 혼잡도 측정 및 루틴 추천 서비스</div>
                         </div>
                     </div>
 
-                     <div class="flip-container" id="Garage">
+                    <div class="flip-container fade-up" id="Garage">
                         <div class="flip-card">
-                            <div class="flip-card-front">203Garage</div>
+                            <div class="flip-card-front">
+                                <img class="projectImage" src="resource/garageImage.webp" />
+                            </div>
                             <div class="flip-card-back">중고 의류 판매 플랫폼</div>
                         </div>
                     </div>
@@ -98,23 +124,29 @@
                     <img src="resource/movie.svg" class="icons">
                     <p class="subTitle">Media Projects</p>
 
-                    <div class="flip-container" id="mv">
+                    <div class="flip-container fade-up" id="mv">
                         <div class="flip-card">
-                            <div class="flip-card-front">Beautiful - Lumsum<br>뮤직비디오</div>
+                            <div class="flip-card-front">
+                                <img class="projectImage" src="resource/mvImage.webp" />
+                            </div>
                             <div class="flip-card-back">하우스 장르 음악 뮤직비디오</div>
                         </div>
                     </div>
 
-                    <div class="flip-container" id="car">
+                    <div class="flip-container fade-up" id="car">
                         <div class="flip-card">
-                            <div class="flip-card-front">차량 리뷰 유튜브 영상</div>
+                            <div class="flip-card-front">
+                                <img class="projectImage" src="resource/carImage.webp" />
+                            </div>
                             <div class="flip-card-back">차량 리뷰어 채널의 차량 리뷰 영상</div>
                         </div>
                     </div>
 
-                    <div class="flip-container" id="estate">
+                    <div class="flip-container fade-up" id="estate">
                         <div class="flip-card">
-                            <div class="flip-card-front">부동산 유튜브 영상</div>
+                            <div class="flip-card-front">
+                                <img class="projectImage" src="resource/estateImage.webp" />
+                            </div>
                             <div class="flip-card-back">부동산 매물 소개 채널의 유튜브 영상</div>
                         </div>
                     </div>
@@ -124,11 +156,20 @@
                 <div class="slide-content">
                     <img src="resource/log.svg" class="icons">
                     <p class="subTitle">Log or Notes</p>
-                    <div class="flip-container" id="contact">
+                    <div class="flip-container fade-up" id="contact">
                         <div class="flip-card">
                             <div class="flip-card-front">Contact</div>
                             <div class="flip-card-back">dbstjr3576@gmail.com</div>
                         </div>
+                    </div>
+                    <div class="detailsWrapperLeft">
+                        <a target="_blank" href="https://www.instagram.com/leeyunseokarchive/">Instagram</a>
+                        <a target="_blank" href="https://github.com/leeyunseokarchive">GitHub</a>
+                        <a target="_blank" href="https://www.linkedin.com/in/lee-yunseok-071890369/">LinkedIn</a>
+                        <a target="_blank" href="mailto:dbstjr3576@gmail.com">dbstjr3576@gmail.com</a>
+                    </div>
+                    <div class="detailsWrapperRight">
+                        <p>©2025 LEEYUNSEOK</p>
                     </div>
                 </div>
             </div>
@@ -140,40 +181,61 @@
 <script defer type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js";
 
-    const firebaseConfig = {
-        apiKey: "AIzaSyDDMmT2SkLGNevAKRCDADLjSTd0TcC8pfo",
-        authDomain: "demoweb-63168.firebaseapp.com",
-        projectId: "demoweb-63168",
-        storageBucket: "demoweb-63168.firebasestorage.app",
-        messagingSenderId: "223776136595",
-        appId: "1:223776136595:web:438a4aaaa6268049a19c66"
-    };
+    $(document).ready(function () {
+        const firebaseConfig = {
+            apiKey: "AIzaSyDDMmT2SkLGNevAKRCDADLjSTd0TcC8pfo",
+            authDomain: "demoweb-63168.firebaseapp.com",
+            projectId: "demoweb-63168",
+            storageBucket: "demoweb-63168.firebasestorage.app",
+            messagingSenderId: "223776136595",
+            appId: "1:223776136595:web:438a4aaaa6268049a19c66"
+        };
 
-    const app = initializeApp(firebaseConfig);
+        const app = initializeApp(firebaseConfig);
 
-    const swiper = new Swiper(".mySwiper", {
-        direction: "vertical",
-        slidesPerView: 1,
-        spaceBetween: 0,
-        mousewheel: true,
-        keyboard: {
-            enabled: true,
-            onlyInViewport: false,
-        },
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        },
-        speed: 1000,
+        $(window).on("load", function () {
+            setTimeout(function () {
+                $("#loading-screen").hide();
+            }, 4000);
+        });
+
+        const swiper = new Swiper(".mySwiper", {
+            direction: "vertical",
+            slidesPerView: 1,
+            spaceBetween: 0,
+            mousewheel: true,
+            keyboard: {
+                enabled: true,
+                onlyInViewport: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            speed: 1000,
+        });
+
+        swiper.on("slideChange", function () {
+            $(".flip-container").each(function () {
+                $(this).removeClass("fade-in").addClass("fade-out");
+            });
+
+            const currentSlide = $(".swiper-slide").eq(swiper.activeIndex);
+            currentSlide.find(".flip-container").each(function (i) {
+                const container = $(this);
+                setTimeout(() => {
+                    container.removeClass("fade-out").addClass("fade-in");
+                }, 250 * i);
+            });
+        });
+
+        const burger = $("#burger");
+        const slideMenu = $("#slideMenu");
+
+        burger.on("change", function () {
+            slideMenu.toggleClass("on", burger.is(":checked"));
+        });
     });
-
-    window.addEventListener("load", () => {
-        const loadingScreen = document.getElementById("loading-screen");
-        setTimeout(() => {
-            loadingScreen.style.display = "none";
-        }, 4000);
-    });
-
 </script>
 
 </html>

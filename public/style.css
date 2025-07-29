@@ -14,6 +14,7 @@ html {
 }
 
 body {
+  position: relative;
   height: 100%;
   overflow: hidden;
   font-family: 'Noto Sans KR', sans-serif;
@@ -56,8 +57,20 @@ input:focus {
   align-items: center;
   z-index: 9999;
   font-weight: 900;
-  animation: loadAnimation 3s ease-in-out 1s forwards;
+  animation: loadAnimation 1s ease-in-out 1s forwards;
   pointer-events: none;
+}
+
+@keyframes loadAnimation {
+  from {
+    filter: blur(0px);
+    opacity: 1;
+  }
+
+  to {
+    filter: blur(10px);
+    opacity: 0;
+  }
 }
 
 header {
@@ -67,7 +80,6 @@ header {
   width: 100%;
   height: 40px;
   background-color: rgba(248, 248, 248, 0.5);
-  /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -99,7 +111,7 @@ header {
   opacity: 1;
   left: 0;
   transform: rotate(0deg);
-  transition: .25s ease-in-out;
+  transition: 1s ease-in-out;
 }
 
 .burger span:nth-of-type(1) {
@@ -136,16 +148,61 @@ header {
   left: 5px;
 }
 
-@keyframes loadAnimation {
-  from {
-    filter: blur(0px);
-    opacity: 1;
-  }
+#slideMenu {
+  width: 100%;
+  /*슬라이드가 펼쳐질 너비 */
+  height: calc(100% - 40px);
+  position: absolute;
+  top: -100%;
+  background-color: #f8f8f8;
 
-  to {
-    filter: blur(10px);
-    opacity: 0;
-  }
+  /*메뉴가 왼쪽으로 펼쳐지는 애니메이션을 구현하기 위한 transition 속성들*/
+  /*각 브라우저에 대응하기 위해 브라우저 별 transition 속성을 주었습니다.*/
+  transition: top 1s;
+  -webkit-transition: top 1s;
+  -moz-transition: top 1s;
+  -ms-transition: top 1s;
+  -o-transition: top 1s;
+  z-index: 999;
+}
+
+#slideMenu ul li {
+  display: inline-block;
+  padding-top: 1rem;
+}
+
+#slideMenu.on {
+  top: 40px;
+}
+
+#slideMenu ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(100% - 100px);
+  font-size: 4rem;
+  font-weight: 900;
+}
+
+.detailsWrapperLeft,
+.detailsWrapperRight {
+  position: absolute;
+  bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  font-size: 1.3rem;
+}
+
+.detailsWrapperLeft {
+  align-items: flex-start;
+  left: 10px;
+}
+
+.detailsWrapperRight {
+  align-items: flex-end;
+  right: 10px;
 }
 
 .swiper {
@@ -187,6 +244,17 @@ header {
   height: 200px;
   perspective: 1000px;
   margin: 50px auto;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease;
+}
+
+.flip-container.fade-in {
+  opacity: 1;
+}
+
+.flip-container.fade-out {
+  opacity: 0;
 }
 
 .flip-card {
@@ -207,79 +275,95 @@ header {
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
-  border: 2px solid #ccc;
   border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 3rem;
-  font-weight: 900;
-  color: #333;
+  font-family: "Pacifico", cursive;
+  font-size: 5rem;
+  font-weight: 400;
+}
+
+.projectImage {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: contain;
+  filter: grayscale(1);
 }
 
 .flip-card-back {
   transform: rotateY(180deg);
+  font-family: 'Noto Sans KR', sans-serif;
   font-size: 1.5rem;
   padding: 20px;
   text-align: center;
 }
 
-#info {
-  top: 30%;
-  left: 20%;
-  transform: translate(-50%, -50%);
+@media (max-width: 767px) {
+  .flip-container {
+    position: relative;
+  }
 }
 
-#career {
-  top: 60%;
-  left: 80%;
-  transform: translate(-50%, -50%);
-}
+@media (min-width: 768px) {
+  #info {
+    top: 30%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+  }
 
-#skills {
-  top: 70%;
-  left: 30%;
-  transform: translate(-50%, -50%);
-}
+  #career {
+    top: 60%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+  }
 
-#portfolio {
-  top: 30%;
-  left: 30%;
-  transform: translate(-50%, -50%);
-}
+  #skills {
+    top: 70%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+  }
 
-#HealthPT {
-  top: 60%;
-  left: 80%;
-  transform: translate(-50%, -50%);
-}
+  #portfolio {
+    top: 30%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+  }
 
-#Garage {
-  top: 70%;
-  left: 20%;
-  transform: translate(-50%, -50%);
-}
+  #HealthPT {
+    top: 60%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+  }
 
-#mv {
-  top: 30%;
-  left: 20%;
-  transform: translate(-50%, -50%);
-}
+  #Garage {
+    top: 70%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+  }
 
-#car {
-  top: 60%;
-  left: 80%;
-  transform: translate(-50%, -50%);
-}
+  #mv {
+    top: 30%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+  }
 
-#estate {
-  top: 70%;
-  left: 30%;
-  transform: translate(-50%, -50%);
-}
+  #car {
+    top: 60%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+  }
 
-#contact {
-  top: 65%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  #estate {
+    top: 70%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+  }
+
+  #contact {
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
