@@ -1,4 +1,4 @@
-<img src="https://capsule-render.vercel.app/api?type=waving&color=auto&height=250&section=header&text=Leeyunseok Portfoilo&fontSize=80" />
+![waving](https://capsule-render.vercel.app/api?type=waving&height=200&text=Leeyunseok%20Portfolio&fontAlign=50&fontAlignY=40&color=gradient)
 
 ## 🌐 웹사이트
 
@@ -11,6 +11,27 @@
 미니멀한 디자인을 유지하면서도, 인터랙션 중심의 구성과 사용자 친화적 네비게이션을 통해 정보 전달과 사용성을 모두 고려해 설계되었습니다.
 
 ---
+
+## 🖥️ 서비스 화면
+
+|메인화면 스크롤|
+|:---:|
+|<img src="https://github.com/user-attachments/assets/0ff40207-7332-4f05-a881-a378e3280def" width="450"/>|
+|메인화면에서 아래로 스크롤 시, 슬라이드와 내용이 부드럽게 전환됩니다.|
+
+
+|Filp 카드 인터랙션|
+|:---:|
+|<img src="https://github.com/user-attachments/assets/c5b31185-7c8c-49ed-be63-9f6319a4eb93" width="450"/>|
+|카드를 호버링하면 세부 내용을 볼 수 있으며, 클릭 시 관련 사이트로 연결됩니다.|
+
+|슬라이딩 메뉴|
+|:---:|
+|<img src="https://github.com/user-attachments/assets/7980105f-7eed-4031-9c62-054184d7eaf5" width="450"/>|
+|모션이 들어간 햄버거 메뉴와 슬라이딩 메뉴를 구현했습니다.|
+
+---
+
 ## 🛠️ 기술 스택
 
 ### 📱 Frontend
