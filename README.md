@@ -1,4 +1,6 @@
-# Leeyunseok Portfolio
+<img src="https://capsule-render.vercel.app/api?type=waving&color=auto&height=250&section=header&text=Leeyunseok Portfoilo&fontSize=80" />
+
+## 🌐 웹사이트
 
 [Leeyunseok Portfolio](http://demoweb-63168.web.app)
 
@@ -9,12 +11,16 @@
 미니멀한 디자인을 유지하면서도, 인터랙션 중심의 구성과 사용자 친화적 네비게이션을 통해 정보 전달과 사용성을 모두 고려해 설계되었습니다.
 
 ---
+## 🛠️ 기술 스택
 
-## 🛠️ 기술 스택  
+### 📱 Frontend
 ![html](https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white)
 ![js](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=JavaScript&logoColor=white)
 ![css](https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white)
+
+### 👝 Backend & Deploy
 ![fb](https://img.shields.io/badge/Firebase-039BE5?style=for-the-badge&logo=Firebase&logoColor=white)
+
 ---
 
 ## 📂 폴더 구조
@@ -41,6 +47,7 @@
    │  ├─ carImage.webp
    │  └─ estateImage.webp
 ```
+
 ---
 
 ## ✨ 주요 기능  
@@ -67,6 +74,7 @@
 
 ## 🙋‍♂️ 제작자  
 - 이름: Leeyunseok
+- 역할: Full-stack Developer (1인 개발)
 - GitHub: [@leeyunseokarchive](https://github.com/leeyunseokarchive)
 - Instagram: [@oskueny](https://www.instagram.com/oskueny/)
 - 문의: dbstjr3576@gmail.com
